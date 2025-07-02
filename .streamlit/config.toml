@@ -1,0 +1,19 @@
+[client]
+showSidebarNavigation = false
+
+[server]
+headless = true
+runOnSave = true
+maxMessageSize = 250
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#215C98"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F2F6"
+textColor = "#262730"
+font = "sans serif"
+

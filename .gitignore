@@ -1,0 +1,17 @@
+__pycache__/
+keys/
+venv*
+*.env
+**.ipynb
+/*dev/
+/*pages/dev/
+
+/*backup/
+
+*dev*.py
+*bkp.py
+tmp.py
+
+.streamlit/secrets.toml
+
+
