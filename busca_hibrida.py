@@ -62,6 +62,14 @@ def buscar_similares_hibrido(material: str, cor: str, top_k=20):
     D, I = index.search(vetor_final, top_k)
     resultados = df_metadados.iloc[I[0]].copy()
     resultados["distancia"] = D[0]
+    # resultados["url"] = path_img  # adiciona a URL usada como base
+    # Adiciona a URL correta para cada linha
+    resultados["url"] = (
+        "https://inbrands-streamlit.s3.us-east-2.amazonaws.com/media/aviamentos/" +
+        resultados["material"].astype(str).str.strip().str.lower() + "_" +
+        resultados["cor_material"].astype(str).str.strip().str.lower() + ".jpg"
+    )
+
     return resultados.to_dict(orient="records")
 
 
