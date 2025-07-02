@@ -77,7 +77,9 @@ if submitted:
 
 
                 st.subheader("Material de Referência")
-                exibir_imagem(resultados[0]['path_completo'])
+                # exibir_imagem(resultados[0]['path_completo'])
+                exibir_imagem(resultados[0]['url'])  # era path_completo
+
 
                 cols = st.columns(3)
                 for idx, (i, r) in enumerate(df_final_01.iterrows()):
@@ -88,4 +90,6 @@ if submitted:
                             f"Grupo: {r['grupo']} | Subgrupo: {r['subgrupo']} | Categoria: {r['categoria_produto']}",
                             unsafe_allow_html=True
                         )
-                        exibir_imagem(r['path_completo'])
+                        exibir_imagem(r['url'])  # era path_completo
+
+                        # exibir_imagem(r['path_completo'])
